@@ -147,12 +147,12 @@ private:
 		switch (preset_status_)
 		{
 		case Status::Valid:
-			outline_colour = Colour(0xff009cdd);
+			outline_colour = Colour(0x8B7500);
 			break;
 
 		case Status::Empty:
 		case Status::Invalid:
-			outline_colour = Colour(0xffd51535);
+			outline_colour = Colour(0x8B7500);
 		}
 
 		g.setColour(findColour(TextEditor::backgroundColourId));

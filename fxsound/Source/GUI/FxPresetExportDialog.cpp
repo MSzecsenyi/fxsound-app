@@ -51,7 +51,7 @@ void FxPresetExportDialog::PresetExportProgress::paint(Graphics& g)
         colour_gradient_start_ = 0.0;
     }
 
-    ColourGradient gradient = ColourGradient::horizontal(Colour(0xe63462).withAlpha(1.0f), colour_gradient_start_* (float)getWidth(), Colour(0xf3f3f3).withAlpha(1.0f), getWidth());
+    ColourGradient gradient = ColourGradient::horizontal(Colour(0xb8860b).withAlpha(1.0f), colour_gradient_start_* (float)getWidth(), Colour(0xf3f3f3).withAlpha(1.0f), getWidth());
 
     g.setFillType(FillType(gradient));
     auto area = juce::Rectangle<float>(0, 0, getWidth(), getHeight());
@@ -131,7 +131,7 @@ void FxPresetExportDialog::PresetExportComponent::paintListBoxItem(int rowNumber
 {
     if (rowIsSelected)
     {
-        g.fillAll(Colour(0xe63462).withAlpha(1.0f));
+        g.fillAll(Colour(0xb8860b).withAlpha(1.0f));
     }
 
     auto preset = FxModel::getModel().getPreset(rowNumber);

@@ -84,17 +84,17 @@ void FxVisualizer::paint(Graphics& g)
         alpha = 1.0;
     }
     
-    ColourGradient gradient(isEnabled() ? Colour(0xd51535).withAlpha(alpha) : Colour(0xd51535).withSaturation(0.0f).withAlpha(alpha),
+    ColourGradient gradient(isEnabled() ? Colour(0x8b7500).withAlpha(alpha) : Colour(0x8b7500).withSaturation(0.0f).withAlpha(alpha),
                             2.0f, 0.0f, 
-                            isEnabled() ? Colour(0xd51535).withAlpha(alpha) : Colour(0xd51535).withSaturation(0.0f).withAlpha(alpha),
+                            isEnabled() ? Colour(0x8b7500).withAlpha(alpha) : Colour(0x8b7500).withSaturation(0.0f).withAlpha(alpha),
                             2.0f, 100.0f, false);
     if (isEnabled())
     {
-        gradient.addColour(0.5f, Colour(0xfe566a).withAlpha(alpha));
+        gradient.addColour(0.5f, Colour(0xfbbf7a).withAlpha(alpha));
     }
     else
     {
-        gradient.addColour(0.5f, Colour(0xfe566a).withSaturation(0.0f).withAlpha(alpha));
+        gradient.addColour(0.5f, Colour(0xfbbf7a).withSaturation(0.0f).withAlpha(alpha));
     }
     g.setGradientFill(gradient);
 
@@ -118,7 +118,7 @@ void FxVisualizer::paint(Graphics& g)
     g.setFillType(FillType(Colour(0x0).withAlpha(0.2f)));
     g.fillRoundedRectangle(bounds.toFloat(), 8);
 
-    g.setFillType(FillType(Colour(0xe33250).withAlpha(1.0f)));
+    g.setFillType(FillType(Colour(0xffc125).withAlpha(1.0f)));
 
     float x = 80;
     for (auto index = 0; index < FxController::NUM_SPECTRUM_BANDS; index++)

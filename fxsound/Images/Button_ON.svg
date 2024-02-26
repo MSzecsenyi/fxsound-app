@@ -4,12 +4,12 @@
   <desc>Created with Sketch.</desc>
   <defs>
     <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
-      <stop stop-color="#FF6881" offset="0"/>
-      <stop stop-color="#D51535" offset="1"/>
+      <stop stop-color="#CD950C" offset="0"/>
+      <stop stop-color="#8B7500" offset="1"/>
     </linearGradient>
     <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-2">
-      <stop stop-color="#F4526C" offset="0"/>
-      <stop stop-color="#780E1E" offset="1"/>
+      <stop stop-color="#CD950C" offset="0"/>
+      <stop stop-color="#4B3C07" offset="1"/>
     </linearGradient>
     <circle id="path-3" cx="65" cy="65" r="50"/>
     <filter x="-15.0%" y="-15.0%" width="130.0%" height="130.0%" filterUnits="objectBoundingBox" id="filter-4">

@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //==============================================================================
 FxTheme::FxTheme() : LookAndFeel_V4(getFxColourScheme())
 {
-	setColour(ComboBox::ColourIds::arrowColourId, Colour(0xe63462).withAlpha(1.0f));
+	setColour(ComboBox::ColourIds::arrowColourId, Colour(0xb8860b).withAlpha(1.0f));
 	setColour(ComboBox::ColourIds::backgroundColourId, Colour(0x000000).withAlpha(1.0f));
 	setColour(ComboBox::ColourIds::outlineColourId, Colour(0x000000).withAlpha(1.0f));
 	setColour(ComboBox::ColourIds::focusedOutlineColourId, Colour(0x000000).withAlpha(1.0f));
@@ -32,16 +32,16 @@ FxTheme::FxTheme() : LookAndFeel_V4(getFxColourScheme())
 	setColour(TextEditor::ColourIds::focusedOutlineColourId, Colour(0x000000).withAlpha(1.0f));
 	setColour(TextEditor::ColourIds::textColourId, Colour(0xb1b1b1).withAlpha(1.0f));
 	setColour(TextEditor::ColourIds::highlightedTextColourId, Colour(0xffffff).withAlpha(1.0f));
-	setColour(TextButton::ColourIds::buttonColourId, Colour(0xd51535).withAlpha(1.0f));
-	setColour(TextButton::ColourIds::buttonOnColourId, Colour(0xd51535).withAlpha(1.0f));
+	setColour(TextButton::ColourIds::buttonColourId, Colour(0x8b7500).withAlpha(1.0f));
+	setColour(TextButton::ColourIds::buttonOnColourId, Colour(0x8b7500).withAlpha(1.0f));
 	setColour(TextButton::ColourIds::textColourOffId, Colour(0xffffff).withAlpha(1.0f));
 	setColour(TextButton::ColourIds::textColourOnId, Colour(0xffffff).withAlpha(1.0f));
 	setColour(HyperlinkButton::ColourIds::textColourId, Colour(0xffffff).withAlpha(1.0f));
 	setColour(CaretComponent::ColourIds::caretColourId, Colour(0xb1b1b1).withAlpha(1.0f));
 	setColour(PopupMenu::ColourIds::backgroundColourId, Colour(0x000000).withAlpha(1.0f));
-	setColour(PopupMenu::ColourIds::highlightedBackgroundColourId, Colour(0xe63462).withAlpha(1.0f));
-    setColour(Slider::ColourIds::rotarySliderOutlineColourId, Colour(0xe33250).withAlpha(0.2f));
-    setColour(Slider::ColourIds::rotarySliderFillColourId, Colour(0xe33250).withAlpha(1.0f));
+	setColour(PopupMenu::ColourIds::highlightedBackgroundColourId, Colour(0xb8860b).withAlpha(1.0f));
+    setColour(Slider::ColourIds::rotarySliderOutlineColourId, Colour(0xcd950c).withAlpha(0.2f));
+    setColour(Slider::ColourIds::rotarySliderFillColourId, Colour(0xcd950c).withAlpha(1.0f));
 
 	drop_down_arrow_ = Drawable::createFromImageData(BinaryData::dropdown_arrow_hover_svg, BinaryData::dropdown_arrow_hover_svgSize);
 	slider_thumb_ = Drawable::createFromImageData(BinaryData::Slider_Thumb_svg, BinaryData::Slider_Thumb_svgSize);
@@ -86,7 +86,7 @@ void FxTheme::drawComboBox(Graphics& g, int width, int height, bool,
 
 	if (box.hasKeyboardFocus(true))
 	{
-		g.setColour(Colour(0xf7546f).withAlpha(0.2f));
+		g.setColour(Colour(0xfaa54d).withAlpha(0.2f));
 		g.drawRoundedRectangle(boxBounds.toFloat().reduced(0.5f, 0.5f), cornerSize, 1.0f);
 	}
 	else
@@ -114,7 +114,7 @@ void FxTheme::drawLinearSlider(Graphics& g, int x, int y, int width, int height,
 		auto radius = getSliderThumbRadius(slider);
 
         Colour colour1;
-        colour1 = Colour(0xe33250).withAlpha(0.4f);
+        colour1 = Colour(0xcd950c).withAlpha(0.4f);
         Colour colour2;
         colour2 = Colour(0xf3f3f3).withAlpha(0.4f);
 
@@ -134,7 +134,7 @@ void FxTheme::drawLinearSlider(Graphics& g, int x, int y, int width, int height,
 
         if (slider.getThumbBeingDragged() >= 0 || slider.hasKeyboardFocus(true))
         {
-            Colour colour = Colour(0xf7546f).withAlpha(0.1f);
+            Colour colour = Colour(0xfaa54d).withAlpha(0.1f);
             g.setFillType(colour);
             g.fillRoundedRectangle(juce::Rectangle<float>(x + (width - SLIDER_THUMB_RADIUS*4) / 2, y, SLIDER_THUMB_RADIUS * 4, height).expanded(0, SLIDER_THUMB_RADIUS), 20);
         }
@@ -143,7 +143,7 @@ void FxTheme::drawLinearSlider(Graphics& g, int x, int y, int width, int height,
 	{
 		auto radius = getSliderThumbRadius(slider);
 
-        Colour colour = Colour(0xe33250).withAlpha(0.2f);
+        Colour colour = Colour(0xcd950c).withAlpha(0.2f);
         if (!slider.isEnabled())
         {
             colour = colour.withSaturation(0.0);
@@ -152,7 +152,7 @@ void FxTheme::drawLinearSlider(Graphics& g, int x, int y, int width, int height,
 		g.setFillType(colour);
 		g.fillRoundedRectangle(x, y+(height-3)/2, width, 3, 5.6f);
 
-        colour = Colour(0xe33250).withAlpha(1.0f);
+        colour = Colour(0xcd950c).withAlpha(1.0f);
         if (!slider.isEnabled())
         {
             colour = colour.withSaturation(0.0);
@@ -168,7 +168,7 @@ void FxTheme::drawLinearSlider(Graphics& g, int x, int y, int width, int height,
 	
 		if (slider.hasKeyboardFocus(true))
 		{
-			Colour colour = Colour(0xf7546f).withAlpha(0.1f);
+			Colour colour = Colour(0xfaa54d).withAlpha(0.1f);
 			g.setFillType(colour);
 			g.fillRoundedRectangle(juce::Rectangle<float>(x, y, width, height).expanded(SLIDER_THUMB_RADIUS/2, SLIDER_THUMB_RADIUS/2), height+SLIDER_THUMB_RADIUS);
 		}
@@ -226,7 +226,7 @@ void FxTheme::drawRotarySlider(Graphics& g, int x, int y, int width, int height,
 	if (slider.hasKeyboardFocus(true))
 	{
 		DropShadow shadow;
-		shadow.colour = Colour(0xf7546f).withAlpha(0.1f);
+		shadow.colour = Colour(0xfaa54d).withAlpha(0.1f);
 		shadow.drawForPath(g, backgroundArc);
 	}
 

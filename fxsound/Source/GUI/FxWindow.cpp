@@ -164,7 +164,7 @@ void FxWindow::CloseButton::paintButton(Graphics& g, bool, bool)
 	shape.addLineSegment({ 0.0f, 0.0f, 1.0f, 1.0f }, 0.08f);
 	shape.addLineSegment({ 1.0f, 0.0f, 0.0f, 1.0f }, 0.08f);
 
-	g.setColour(Colour(0xffe63462));
+	g.setColour(Colour(0xffB8860B));
 	g.fillPath(shape, shape.getTransformToScaleToFit(rect, true));
 }
 

@@ -226,8 +226,8 @@ void FxEqualizer::paint(Graphics& g)
     Path path;
 
     Colour line_colour = Colour(0xffe33250);
-    Colour gradient_colour_1 = Colour(0xef4b65).withAlpha(0.34f);
-    Colour gradient_colour_2 = Colour(0x742834).withAlpha(0.0f);
+    Colour gradient_colour_1 = Colour(0xc68e17).withAlpha(0.34f);
+    Colour gradient_colour_2 = Colour(0x4b3c07).withAlpha(0.0f);
 
     if (!isEnabled())
     {
